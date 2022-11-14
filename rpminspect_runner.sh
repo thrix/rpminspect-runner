@@ -219,6 +219,7 @@ if [ ! -f "${results_cached_file}" ]; then
 
     # Run all inspections and cache results
     /usr/bin/rpminspect -c ${config} \
+            --workdir=${RPMINSPECT_WORKDIR} \
             --format=json \
             --output=results.json \
             --verbose \
